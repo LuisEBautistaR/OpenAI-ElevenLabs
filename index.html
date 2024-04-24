@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Texto a Voz</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-3">
+    <h1 class="mb-3">Texto a Voz con IA</h1>
+    <h3 class="mb-3">Convertidor de Texto a Voz con ElevenLabs</h3>
+    <textarea id="textInput" rows="4" cols="50" class="form-control mb-2"></textarea>
+    <button onclick="sendTextToSpeechRequest()" class="btn btn-primary">Convertir a Voz</button>
+    <audio id="audioPlayer" controls style="margin-top: 20px; width: 100%;"></audio>
+    <h3 class="mb-3">Interacción con Open Ai - ElevenLabs</h3>
+    <textarea id="chatInput" rows="2" cols="50" class="form-control my-2"></textarea>
+    <button onclick="sendChatAndSpeakRequest()" class="btn btn-success">Enviar y Hablar</button>
+    <audio id="audioPlayer1" controls style="margin-top: 20px; width: 100%;"></audio>
+
+    <div class="d-flex justify-content-center">
+        <div id="loader" class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem; display: none;">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+
+    <script src="actions.js"></script>
+</body>
+</html>
